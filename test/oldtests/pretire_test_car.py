@@ -10,7 +10,6 @@ class TestCalliope(unittest.TestCase):
         last_service_date = today.replace(year=today.year - 3)
         current_mileage = 0
         last_service_mileage = 0
-
         car = CarFactory.create_calliope(current_date=today,last_service_date=last_service_date,current_mileage=current_mileage,last_service_mileage=last_service_mileage)
         self.assertTrue(car.needs_service())
 
